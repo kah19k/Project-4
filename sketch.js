@@ -1,5 +1,5 @@
 
-let teapot;
+let torsofemale;
 
 function preload() {
   // Load model with normalise parameter set to true
