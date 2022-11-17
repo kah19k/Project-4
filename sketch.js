@@ -3,19 +3,23 @@ let torsofemale;
 
 function preload() {
   // Load model with normalise parameter set to true
-  teapot = loadModel('assets/torsofemale.obj', true);
+  torsofemale = loadModel('assets/torsofemale.obj', true);
 }
 
 function setup() {
-  createCanvas(100, 100, WEBGL);
-  describe('Vertically rotating 3-d teapot with red, green and blue gradient.');
+  createCanvas(1200, 700, WEBGL);
+  
 }
 
 function draw() {
-  background(200);
-  scale(0.4); // Scaled to make model fit into canvas
-  rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.01);
+  background(300);
+  scale(3); // Scaled to make model fit into canvas
+  let jitter = 0;
+  if (mouseIsPressed) {  jitter = random(-.1,.1); }
+  rotateX(frameCount * 0.01 + jitter);
+  rotateY(frameCount * 0.01 + jitter);
   normalMaterial(); // For effect
-  model(teapot);
+  model(torsofemale);
+  orbitControl();
+
 }
