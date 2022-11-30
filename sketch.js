@@ -72,11 +72,14 @@ function draw() {
 
    drawingContext.disable(drawingContext.DEPTH_TEST);
    drawingContext.enable(drawingContext.BLEND);
+   drawingContext.enable(drawingContext.BLEND);
    //drawingContext.enable(drawingContext.DEPTH_TEST)
    
   
   }
+   
   
+
   rotateX(frameCount * 0.01 + jitter);
   rotateY(frameCount * 0.01 + jitter);
   normalMaterial(); // For effect
